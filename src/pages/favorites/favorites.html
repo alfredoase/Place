@@ -1,0 +1,28 @@
+<!--
+  Generated template for the FavoritesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        Favorites List
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <h3>There are your favorite list about matches:</h3>
+    <ion-list [virtualScroll]="favList">
+      <ion-item *virtualItem="let matchFav">
+        <ion-card class="card">
+          <ion-card-header>
+            <ion-card-content>
+              {{matchFav[1]}} VS {{matchFav[2]}}
+            </ion-card-content>
+          </ion-card-header>
+        </ion-card>
+      </ion-item>
+    </ion-list>
+  </ion-content>

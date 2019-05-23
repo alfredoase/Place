@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      PlaceMyBet
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Listado de partidos:</h3>
+  <ion-list [virtualScroll]="matchesList">
+    <ion-item *virtualItem="let match">
+      <ion-card (click)="createBet(match[0])" class="card">
+        <ion-card-header>
+          <ion-card-content>
+            <img src="{{srcImages(match[1])}}" id="local" />
+            {{match[1]}} VS {{match[2]}}
+            <img src="{{srcImages(match[2])}}" id="visitante" />
+          </ion-card-content>
+        </ion-card-header>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>

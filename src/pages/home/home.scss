@@ -1,0 +1,28 @@
+page-home {
+    background-color: black;
+}
+
+body{
+    background-color: black;
+}
+
+.card{
+    text-align: center;
+    text-transform: capitalize;
+    
+}
+
+.card-title-md{
+    font-size: 2rem;
+}
+
+#local{
+    width: 15%;
+    float: left;
+    background-position: center;
+}
+#visitante{
+    width: 15%;
+    float: right;
+    background-position: center;
+}

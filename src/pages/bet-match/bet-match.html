@@ -1,0 +1,68 @@
+<!--
+  Generated template for the BetMatchPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Create your bet!</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <h2>{{teamLocal}} VS {{teamVisitor}}</h2>
+  <h3>Markets to bet:</h3>
+  <h4>Need to refresh, to see the shares...</h4>
+  <ion-list [virtualScroll]="marketList">
+    <ion-item *virtualItem="let market" id="itemCard">
+      <ion-card class="card">
+        <ion-card-header>
+          <div id="market">Market {{market[1]}} score:</div>
+          <div id="txtCB">
+            <p>
+              Only can bet over or under:
+            </p>
+          </div>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row>
+
+              <ion-col>
+
+                <div id="dineroO">
+                  <div id="cuota">Cuota over: {{market[2]}}</div>
+                  <ion-item>
+                    Dinero:
+                    <b></b>
+                    <ion-input required type="number" name="{{market[0]}}" placeholder="Input the bet..." onfocus="this.value=''" [(ngModel)]="dinO" id="inText" [disabled]="desactivarT(market)"></ion-input>
+                  </ion-item>
+                  <button ion-button id="button" (click)="createBetMarket(market, isOver=true)" [disabled]="desactivarT(market)">Bet
+                    to over!</button>
+                </div>
+              </ion-col>
+              <ion-col>
+                <div id="dineroU">
+                  <div id="cuota">Cuota under: {{market[3]}}</div>
+                  <ion-item>
+                    Dinero:
+                    <b></b>
+                    <ion-input type="number" name="{{market[0]}}" placeholder="Input the bet..." onfocus="this.value=''" [(ngModel)]="dinU" id="inText" [disabled]="desactivarT(market)"></ion-input>
+                  </ion-item>
+                  <button ion-button id="button" (click)="createBetMarket(market, isOver=false)" [disabled]="desactivarT(market)">Bet
+                    to under!</button>
+                </div>
+
+              </ion-col>
+
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+
+      </ion-card>
+
+    </ion-item>
+  </ion-list>
+</ion-content>

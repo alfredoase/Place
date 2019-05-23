@@ -1,0 +1,80 @@
+page-bet-match {
+    background-color: black;
+}
+
+body{
+    background-color: black;
+}
+
+h2{
+    color: white;
+    text-align: center;
+    background-image: linear-gradient(black, #272727);
+    border-radius: 2px;
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+h3{
+    color: white;
+    text-align: center;
+    background-image: linear-gradient(black, #272727);
+    border-radius: 2px;
+    padding: 10px;
+}
+
+.toast{
+    .toast-wrapper{
+        background: red;
+        margin: 10px;
+    }
+    .toast-text{
+        text-align: center;
+    }
+}
+
+.card{
+    text-align: left;
+    background: #fffcfc;
+    color: black;
+}
+
+#market{
+    background-color: rgba(0, 0, 0, .8);
+    padding: 10px;
+    border-radius: 2px;
+    color: white;
+    text-align: left;
+}
+
+#inText{
+    width: fit-content;
+    border: 1px solid black;
+}
+
+#dineroO{
+    text-align: left;
+}
+
+#dineroU{
+    text-align: left;
+}
+
+#txtCB{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    text-transform: none;
+    width: fit-content;
+}
+
+.cb{
+    background: black;
+}
+
+#cuota{
+    background: rgb(0, 138, 53);
+    border-radius: 2px;
+    padding: 5px;
+    font-size: 1.5rem;
+}

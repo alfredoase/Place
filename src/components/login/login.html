@@ -1,0 +1,30 @@
+<!-- Generated template for the LoginComponent component -->
+<ion-scroll scrollY="true">
+  <ion-grid>
+    <ion-row align-self-center>
+      <ion-col align-items-center>
+        <h1>First you need login!</h1>
+        <br>
+        <br>
+        <ion-input type="text" placeholder="User" [(ngModel)]="user"></ion-input>
+        <br>
+        <ion-input type="text" placeholder="Password" [(ngModel)]="pass"></ion-input>
+        <br>
+        <br>
+        <button ion-button  id="button" (click)="login(user, pass)">Login!</button>
+        <button ion-button id="button" (click)="exit()">Exit</button>
+      </ion-col>
+    </ion-row>
+    <br><br>
+    <ion-row>
+      <ion-note color="danger"><h5>User credentials:</h5></ion-note>
+    </ion-row>
+    <ion-row>
+      <ion-note>User: user</ion-note>
+    </ion-row>
+    <ion-row>
+      <ion-note>Password: pass</ion-note>
+    </ion-row>
+  </ion-grid>
+
+</ion-scroll>
